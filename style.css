@@ -152,6 +152,33 @@ select:focus {
     display: none;
 }
 
+.footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.privacy-content {
+    line-height: 1.8;
+}
+
+.privacy-content p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
 /* Responsive */
 @media (max-width: 480px) {
     body {
