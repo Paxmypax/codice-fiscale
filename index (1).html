@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatore Codice Fiscale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generatore Codice Fiscale</h1>
+        
+        <form id="cf-form">
+            <div class="form-group">
+                <label for="cognome">Cognome</label>
+                <input type="text" id="cognome" name="cognome" required placeholder="Es: Rossi">
+            </div>
+            
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Es: Mario">
+            </div>
+            
+            <div class="form-group">
+                <label for="dataNascita">Data di Nascita</label>
+                <input type="date" id="dataNascita" name="dataNascita" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="sesso">Sesso</label>
+                <select id="sesso" name="sesso" required>
+                    <option value="">Seleziona...</option>
+                    <option value="M">Maschio</option>
+                    <option value="F">Femmina</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="comune">Comune di Nascita</label>
+                <input type="text" id="comune" name="comune" required placeholder="Es: Roma" list="comuni-list" autocomplete="off">
+                <datalist id="comuni-list"></datalist>
+                <small class="hint">Inizia a digitare per cercare il comune</small>
+            </div>
+            
+            <button type="submit" class="btn-primary">Genera Codice Fiscale</button>
+        </form>
+        
+        <div id="result" class="result hidden">
+            <label for="codiceFiscale">Codice Fiscale Generato</label>
+            <div class="output-group">
+                <input type="text" id="codiceFiscale" readonly>
+                <button type="button" id="copyBtn" class="btn-copy">Copia negli appunti</button>
+            </div>
+            <p id="copyMessage" class="copy-message hidden">Codice copiato!</p>
+        </div>
+        
+        <div id="error" class="error hidden"></div>
+        
+        <p class="disclaimer">
+            ⚠️ Il codice generato ha valore informativo e non sostituisce quello rilasciato dall'Agenzia delle Entrate.
+        </p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
